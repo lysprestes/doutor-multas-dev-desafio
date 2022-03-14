@@ -125,7 +125,7 @@ A Doutor Multas possui um conjunto de soluções para o Motorista. É comum que 
 
 ---
 
-### :target: Objetivo ###
+### :dart: Objetivo ###
 
 Você será responsável por desenvolver uma aplicação web que exiba para o usuário todos os fabricantes de veículos (carros, motos e caminhões).
 
@@ -137,7 +137,7 @@ Pense em desenvolver uma solução prática para o usuário. Um layout para a ap
 
 ---
 
-### :target: Requisitos ###
+### :pushpin: Requisitos ###
 
 - Ao acessar o site, uma consulta a uma API deverá ser realizada.
 - As listas de fabricantes devem ser exibidas em ordem alfabética.
