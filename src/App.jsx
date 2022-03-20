@@ -1,16 +1,22 @@
-import Accordion from './components/Accordion'
+
+import React from 'react';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Header from './components/Header';
+import Vehicles from './pages/Vehicles';
 
 import 'tw-elements'
 import './App.css'
-import Header from './components/Header'
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      {/* <Loading /> */}
-      <Accordion />
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} exact />
+        <Route path="/:term/:codigo" element={<Vehicles />} exact />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

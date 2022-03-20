@@ -1,0 +1,10 @@
+import Header from '../components/Header';
+import Accordion from '../components/Accordion';
+
+export default function Home() {
+  return (
+    <>
+      <Accordion />
+    </>
+  );
+}

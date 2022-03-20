@@ -1,10 +1,15 @@
-export default function AccordionItem() {
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import arrow from '../static/arrow.svg'
+
+export default function AccordionItem({ title, term, list }) {
+  const [toggle, setToggle] = useState(false)
   return (
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item bg-white border border-gray-200">
-        <h2 class="accordion-header mb-0" id="headingOne">
+    <div className="accordion" id="accordionExample">
+      <div className="accordion-item border border-gray-200 relative" onClick={() => setToggle(!toggle)}>
+        <h2 className="accordion-header mb-0" id={`accordion-header-${term}`}>
           <button
-            class="
+            className="
             accordion-button
             relative
             flex
@@ -21,28 +26,33 @@ export default function AccordionItem() {
           "
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
+            data-bs-target={`#collapse-${term}`}
+            aria-expanded={true}
+            aria-controls={`collapse-${term}`}
+            onClick={() => setToggle(!toggle)}
           >
-            Accordion Item #1
+            {title}
+            <div className="absolute right-2">
+              <img
+                src={arrow}
+                alt="toggle-accordion"
+                className={`${toggle ? 'rotate-180' : ''}`}
+              />
+            </div>
           </button>
         </h2>
         <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
+          id={`collapse-${term}`}
+          className={`accordion-collapse collapse`}
+          aria-labelledby={`accordion-header-${term}`}
           data-bs-parent="#accordionExample"
         >
-          <div class="accordion-body py-4 px-5">
-            <strong>This is the first item's accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+          <div className="accordion-body py-4 px-5 bg-slate-100 rounded-md">
+            {list.map((item) => (
+              <div className="m-2 p-2 bg-white" key={item.codigo}>
+                <Link to={`/${term}/${item.codigo}`} className="text-left hover:text-blue-600">{item.nome}</Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>

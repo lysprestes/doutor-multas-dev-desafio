@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import AccordionItem from "./AccordionItem";
 import Loading from './Loading';
+import drmultas from '../static/drmultas.png';
 
 export default function Accordion() {
   const [cars, setCars] = useState();
@@ -33,7 +34,7 @@ export default function Accordion() {
           <div className="max-w-md mx-auto">
             <div className="divide-y divide-gray-300/50">
               <div className="py-5 text-base space-y-6 text-gray-700">
-                <p>Procure seu veículo pelo modelo:</p>
+                <img src={drmultas} alt="" />
               </div>
             </div>
             <AccordionItem title="Carros" term="carros" list={cars}/>
