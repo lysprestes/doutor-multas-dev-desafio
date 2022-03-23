@@ -7,6 +7,7 @@ import Vehicles from './pages/Vehicles';
 
 import 'tw-elements'
 import './App.css'
+import './index.css'
 
 function App() {
   return (
