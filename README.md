@@ -42,7 +42,7 @@ Responda as perguntas a seguir com base no seu conhecimento prévio com desenvol
 
 #### 2. Fale sobre algo que você já tenha desenvolvido durante:
   1. Seus estudos em programação; <br/>
-    - Decidi estudar programação por conta própria em 2020, mas em 2021 foi quando me dediquei full time aos estudos em desenvolvimento web. 
+    - Decidi estudar programação por conta própria em 2020, mas em 2021 foi quando me dediquei full time aos estudos em desenvolvimento web. Alguns dos aplicativos mais complexos de que me orgulho ter desenvolvido são: [TrybeTunes](https://github.com/lysprestes/trybetunes), um app de músicas que utiliza a API do iTunes, e um [App de receitas](https://github.com/lysprestes/trybe-recipes-app) que utiliza duas APIS. Ambos os projetos foram desenvolvidos em React.
   2. Sua carreira como programador. <br/>
     - No momento, busco por uma oportunidade de início onde possa aprender e me desenvolver profisisonalmente ao lado de uma equipe amigável.
 ---
